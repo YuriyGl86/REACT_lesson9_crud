@@ -1,38 +1,126 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 500px;
+  background-color: #ddd;
+  padding: 10px;
+}
+
+.menu {
+  width: 400px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #fff;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.new-post-button {
+  text-decoration: none;
+  width: 130px;
+  height: 25px;
+  background-color: rgb(109, 116, 175);
+  color:#fff;
+  border-radius: 5px;
   text-align: center;
+  align-self: end;
+  margin-right: 10px;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.post__user-logo {
+  width: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.post {
+  border: 1px solid black;
+  width: 400px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.post__header {
+  display: flex;
+}
+
+.post__user-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.post__user-logo {
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.post__user-signature {
+  display: flex;
+}
+
+.post__user-status {
+  margin-right: 10px;
+}
+
+.new-post-form {
+  width: 400px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  
+}
+
+.new-post-input {
+  margin-bottom: 10px;
+}
+
+.new-post-container {
+  position: relative;
+  padding-top: 30px;
+}
+
+.cl-btn-4 {
+  width: 30px;
+  height: 30px;
+  box-shadow: 0px 10 10px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  background: #337AB7;
+  /* margin: 20px auto; */
+  position: absolute;
+  right: 0;
+  top: -35px;
+  display: block;
+  z-index: 200;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+.cl-btn-4:before,
+.cl-btn-4:after {
+  content: '';
+  width: 80%;
+  height: 6px;
+  background: #BFE2FF;
+  position: absolute;
+  top: 48%;
+  left: 10%;
+  transform: rotate(45deg);
+  transition: all 0.3s ease-out;
+}
+.cl-btn-4:after {
+  transform: rotate(-45deg);
+  transition: all 0.3s ease-out;
+}
+.cl-btn-4:hover:before,
+.cl-btn-4:hover:after {
+  transform: rotate(180deg);
+  background: #FFF; 
+}
+
+.post-link {
+  text-decoration: none;
+  color: black
 }

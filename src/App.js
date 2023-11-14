@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+import { HomePage } from './pages/HomePage'
+import { Layout } from './components/Layout'
+import { NewPage } from './pages/NewPage';
 import './App.css';
+
+import { Routes, Route } from 'react-router-dom';
+import { DetailViewPage } from './pages/DetailViewPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+          <Routes>
+            <Route path="/" element={ <Layout/>}>
+              <Route index element={ <HomePage/>} />
+              <Route path="/posts/new" element={ <NewPage/>} />
+              <Route path="/posts/:id" element={ <DetailViewPage/>} />
+              {/* <Route path="/drift" element={<DriftPage/>} />
+              <Route path="/timeattack" element={<TimeAttackPage/>} />
+              <Route path="/forza" element={<ForzaPage/>} /> */}
+            </Route>
+          </Routes>
+
   );
 }
 
